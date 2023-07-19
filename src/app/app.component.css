@@ -1,3 +1,8 @@
-main {
-    margin-bottom: 200px;
+#main {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
 }

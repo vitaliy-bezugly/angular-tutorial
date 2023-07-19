@@ -1,9 +1,8 @@
-footer {
+#footer {
     color: white;
-
-    position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-    padding: 40px;
+    line-height: 2.5rem;
+
+    padding: 60px;
 }
