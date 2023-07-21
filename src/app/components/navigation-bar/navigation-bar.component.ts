@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FilterService } from "../../services/filter-service.service";
 
 @Component({
   selector: 'app-navigation-bar',
@@ -11,9 +12,14 @@ import { RouterModule } from '@angular/router';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private filterService : FilterService) { }
 
   ngOnInit(): void {
   }
 
+  applyFilter(event: Event): void {
+    event.preventDefault();
+    const filter = (event.target as HTMLInputElement).value;
+    this.filterService.setFilter(filter);
+  }
 }
