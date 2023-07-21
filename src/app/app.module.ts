@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HousingLocationComponent } from './components/housing-location/housing-location.component';
 import { HomeComponent } from './components/home/home.component';
 import routeConfig from './routeConfig';
+import { CommonModule } from "@angular/common";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import routeConfig from './routeConfig';
     BrowserModule,
     RouterModule.forRoot(routeConfig),
     HttpClientModule,
-
+    CommonModule,
+    ReactiveFormsModule,
     NavigationBarComponent,
     FooterComponent,
     HousingLocationComponent,

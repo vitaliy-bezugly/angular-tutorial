@@ -27,4 +27,8 @@ export class HousingService {
   public getHousingLocationById(id: number): Observable<HousingLocation | undefined> {
     return this.http.get<HousingLocation>(this.baseUrl + '/' + id);
   }
+
+  public submitApplication(firstName: string, lastName: string, email: string) : void {
+    console.log('Homes application received for ' + firstName + ' ' + lastName + ' at ' + email + '.');
+  }
 }

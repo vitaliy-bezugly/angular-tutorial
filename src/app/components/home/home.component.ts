@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  wifiHousingLocations() : HousingLocation[] {
+  public wifiHousingLocations() : HousingLocation[] {
     return this.housingLocationList.filter(x => x.wifi);
   }
 }
