@@ -18,10 +18,10 @@ import { HousingService } from 'src/app/services/housing.service';
 })
 export class HomeComponent implements OnInit {
   housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
 
-  constructor() { 
-    this.housingLocationList = this.housingService.getAllHousingLocations();
+  constructor(private housingService: HousingService) {
+    this.housingService.getAllHousingLocations().subscribe(response =>
+      this.housingLocationList = response.items);
   }
 
   ngOnInit(): void {

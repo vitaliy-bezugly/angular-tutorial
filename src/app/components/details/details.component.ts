@@ -33,11 +33,13 @@ export class DetailsComponent implements OnInit {
   public housingLocation: HousingLocation | undefined;
   private route: ActivatedRoute = inject(ActivatedRoute);
   private housingService: HousingService = inject(HousingService);
-  
-  constructor() { 
+
+  constructor() {
     this.housingLocationId = Number(this.route.snapshot.params['id']);
 
-    this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationId);
+    this.housingService.getHousingLocationById(this.housingLocationId).subscribe(response => {
+      this.housingLocation = response;
+    });
   }
 
   ngOnInit(): void {
