@@ -1,9 +1,9 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocation } from 'src/app/interfaces/housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingService } from 'src/app/services/housing.service';
-import { FilterService } from "../../services/filter-service.service";
+import { FilterService } from "../../services/filter.service";
 import { Subscription } from "rxjs";
 
 @Component({

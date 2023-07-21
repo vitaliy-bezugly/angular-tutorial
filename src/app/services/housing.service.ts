@@ -8,6 +8,7 @@ import { environment } from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
+
 export class HousingService {
   private readonly baseUrl = environment.baseUrl;
   private housingLocationList: HousingLocation[]  = [];
